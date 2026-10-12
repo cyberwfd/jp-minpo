@@ -1,0 +1,23 @@
+name: daily-check
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 北京时间每天 06:00
+  workflow_dispatch:        # 允许手动点一下立即跑
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refresh NTV signed chain
+        run: bash refresh.sh jp.m3u || echo "NTV refresh failed, keeping old chain"
+      - name: Check all channels
+        run: bash check.sh jp.m3u || echo "DEAD_FOUND"
+      - name: Commit updates
+        run: |
+          git config user.name "tv-bot"
+          git config user.email "tv-bot@users.noreply.github.com"
+          git add jp.m3u
+          git diff --cached --quiet || git commit -m "daily refresh $(date -u +%F)"
+          git push
