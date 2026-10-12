@@ -4,7 +4,7 @@
 # 注意：tvtvu 已改用每日签名的代理源（/api/channels/{slug}/streams，需 XHR 头），不再直接给 mov3 直链；抓取方式见备忘
 
 #EXTINF:-1 tvg-id="JOAXDTV.jp" group-title="Japan | Terrestrial",日本テレビ
-https://srv1.pxfy.dev/?u=0KO6lzRt7Hsn3sdkyFlxRm1M6MfixSuSI48zxtfDMpILDseXKVzOZiFzFpNB8JIoaVy3V0ZyA405v6z2dtHHRqO5Uw&exp=1791913841&sig=030a5419fc8ccdc1175c52335f34ea48b1a5a9a357f44e3910e51b7c5bdd2718
+https://srv1.pxfy.dev/?u=0KO6lzRt7Hsn3sdkyFlxRm1M6MfixSuSI48zxtfDMpILDseXKVzOZiFzFpNB8JIoaVy3V0ZyA405v6z2dtHHRqO5Uw&exp=1791914238&sig=d73b7d275a6ae82b73d5eb4cc0084c37947f7d54656d276b3d161f835ba48e3b
 
 #EXTINF:-1 tvg-id="JOEXDTV.jp" group-title="Japan | Terrestrial",テレビ朝日
 https://tvasahi.mov3.co/hls/tvasahi.m3u8
