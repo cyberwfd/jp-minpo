@@ -1,17 +1,24 @@
 #!/bin/bash
-# 每日刷新日テレ签名链：调 tvivu XHR API 抓新链，验活通过才写入 jp.m3u
-# 用法：bash refresh.sh [jp.m3u] ; 退出码 0=已刷新，1=失败（保留旧链）
+# 通用刷新：jp.m3u 里所有 "# tvivu: <slug>" 标记的下一行签名链，逐个重抓并验活后替换
+# 没有标记的行（如 netgenx 静态源）会被跳过，由 check.sh 负责验活
+# 用法：bash refresh.sh [jp.m3u] ; 退出码 0=至少刷新一条或无需刷新，1=全部失败
 set -u
 M3U="${1:-jp.m3u}"
 UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36'
+API='https://tvivu.com/api/channels'
+TMPD="$(mktemp -d)"
+trap 'rm -rf "$TMPD"' EXIT
 
-json="$(curl -s --max-time 25 -A "$UA" \
-  -H 'Accept: application/json' \
-  -H 'X-Requested-With: XMLHttpRequest' \
-  -H 'Referer: https://tvivu.com/watch/jp-2' \
-  'https://tvivu.com/api/channels/jp-2/streams' 2>/dev/null)"
+slugs="$(grep '^# tvivu:' "$M3U" | sed 's/# tvivu: *//' | sort -u)"
+[ -z "$slugs" ] && { echo "no tvivu marks in $M3U"; exit 1; }
 
-new_url="$(printf '%s' "$json" | python3 -c "
+for slug in $slugs; do
+  json="$(curl -s --max-time 25 -A "$UA" \
+    -H 'Accept: application/json' \
+    -H 'X-Requested-With: XMLHttpRequest' \
+    -H "Referer: https://tvivu.com/watch/$slug" \
+    "$API/$slug/streams" 2>/dev/null)"
+  url="$(printf '%s' "$json" | python3 -c "
 import json, sys, base64
 try:
     d = json.load(sys.stdin)
@@ -29,36 +36,39 @@ for s in d.get('streams', []):
         print(url)
         break
 ")"
+  if [ -z "$url" ]; then echo "FAIL(grab) $slug"; continue; fi
+  pl="$(curl -s --max-time 20 -A "$UA" "$url" 2>/dev/null)"
+  if printf '%s' "$pl" | grep -q '#EXTM3U' && \
+     printf '%s' "$pl" | grep -qE 'EXT-X-MEDIA-SEQUENCE|EXT-X-STREAM-INF'; then
+    printf '%s' "$url" > "$TMPD/$slug.url"
+    echo "OK $slug"
+  else
+    echo "FAIL(verify) $slug"
+  fi
+done
 
-if [ -z "$new_url" ]; then
-  echo "REFRESH_FAIL: no url from tvivu api"
-  exit 1
-fi
-
-pl="$(curl -s --max-time 20 -A "$UA" "$new_url" 2>/dev/null)"
-printf '%s' "$pl" | grep -q '#EXTM3U' || { echo "REFRESH_FAIL: bad playlist"; exit 1; }
-printf '%s' "$pl" | grep -q 'EXT-X-MEDIA-SEQUENCE' || { echo "REFRESH_FAIL: not a live playlist"; exit 1; }
-
-python3 - "$M3U" "$new_url" << 'PYEOF'
-import sys
-m3u_path, new_url = sys.argv[1], sys.argv[2].strip()
-with open(m3u_path) as f:
-    lines = f.readlines()
-out, i, done = [], 0, False
+python3 - "$M3U" "$TMPD" << 'PYEOF'
+import sys, os
+m3u, tmpd = sys.argv[1], sys.argv[2]
+fresh = {}
+for f in os.listdir(tmpd):
+    if f.endswith('.url'):
+        fresh[f[:-4]] = open(os.path.join(tmpd, f)).read().strip()
+lines = open(m3u).read().splitlines(keepends=True)
+out, i, n = [], 0, 0
 while i < len(lines):
     out.append(lines[i])
-    if not done and lines[i].startswith('#EXTINF:') and '日本テレビ' in lines[i]:
-        i += 1
-        if i < len(lines) and lines[i].startswith('http'):
-            out.append(new_url + '\n')
-            done = True
-        else:
-            out.append(lines[i])
+    if lines[i].startswith('# tvivu:') and i + 1 < len(lines):
+        slug = lines[i].split(':', 1)[1].strip()
+        j = i + 1
+        while j < len(lines) and not lines[j].strip():
+            out.append(lines[j]); j += 1
+        if j < len(lines) and lines[j].startswith('http') and slug in fresh:
+            out.append(fresh[slug] + '\n'); n += 1
+        elif j < len(lines):
+            out.append(lines[j])
+        i = j
     i += 1
-if done:
-    open(m3u_path, 'w').writelines(out)
-    print("NTV chain refreshed")
-else:
-    print("NTV entry not found, no change")
-    sys.exit(1)
+open(m3u, 'w').writelines(out)
+print(f"refreshed {n} chains")
 PYEOF

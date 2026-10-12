@@ -4,7 +4,8 @@
 # 注意：tvtvu 已改用每日签名的代理源（/api/channels/{slug}/streams，需 XHR 头），不再直接给 mov3 直链；抓取方式见备忘
 
 #EXTINF:-1 tvg-id="JOAXDTV.jp" group-title="Japan | Terrestrial",日本テレビ
-https://srv1.pxfy.dev/?u=0KO6lzRt7Hsn3sdkyFlxRm1M6MfixSuSI48zxtfDMpILDseXKVzOZiFzFpNB8JIoaVy3V0ZyA405v6z2dtHHRqO5Uw&exp=1791914238&sig=d73b7d275a6ae82b73d5eb4cc0084c37947f7d54656d276b3d161f835ba48e3b
+# tvivu: jp-2
+https://srv1.pxfy.dev/?u=0KO6lzRt7Hsn3sdkyFlxRm1M6MfixSuSI48zxtfDMpILDseXKVzOZiFzFpNB8JIoaVy3V0ZyA405v6z2dtHHRqO5Uw&exp=1791915214&sig=cdafb1b7e65cea4e381a01f295fe5e98e389a04f21c26266945ce74843c4b97d
 
 #EXTINF:-1 tvg-id="JOEXDTV.jp" group-title="Japan | Terrestrial",テレビ朝日
 https://tvasahi.mov3.co/hls/tvasahi.m3u8
@@ -21,26 +22,31 @@ https://fujitv4.mov3.co/hls/fujitv.m3u8
 #EXTINF:-1 group-title="Japan | Terrestrial",TOKYO MX1
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-tokyomx-cmaf-rakutenjp/playlist.m3u8
 
-#EXTINF:-1 tvg-id="BSNipponTV.jp" group-title="Japan | BS",BS日テレ
-https://naori-test.netgenx.site/pxx.php?shk_cid=bs03#.m3u8
-
 #EXTINF:-1 tvg-id="BSAsahi.jp" group-title="Japan | BS",BS朝日
-https://naori-test.netgenx.site/pxx.php?shk_cid=bs04#.m3u8
+# tvivu: bs-jp
+https://srv1.pxfy.dev/?u=eCESrslj_IRziSU9DLIE0Y7glhYof6aly655DWrjA5Cc0rWV_3luWeE9DeIcBNGeP6IZsNrU8BGldBAopjn9n7R2WzVEfHEa9PqJI8m51oH8zRTccJM&exp=1791915216&sig=f57f8673a0caf4220ba01d767bb270473f6c5369088852d3bae86810b30975e0
 
 #EXTINF:-1 tvg-id="BSTBS.jp" group-title="Japan | BS",BS-TBS
-http://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs05
-
-#EXTINF:-1 tvg-id="BSTVTokyo.jp" group-title="Japan | BS",BSテレ東
-https://naori-test.netgenx.site/pxx.php?shk_cid=bs06#.m3u8
+# tvivu: bs-tbs
+https://srv1.pxfy.dev/?u=3UCaVjyjxqLjpwmI5fInH8dRKDEj9C6KbHNa5XKobcT3Mc_oqpxhv1C7s44udV56x0sCTpBJkU8lUVibQ8k2La47Hu9dkzoAAeuC_zzHdx0DxiIEcfM&exp=1791915219&sig=7887d24c2fafb6ca63b719b8317bfaf8e308a59e9bb7efa9d5924f8f6fffe950
 
 #EXTINF:-1 tvg-id="BSFuji.jp" group-title="Japan | BS",BSフジ
-https://naori-test.netgenx.site/pxx.php?shk_cid=bs11#.m3u8
+https://naori-test.netgenx.site/pxx.php?shk_cid=bs06#.m3u8
+
+#EXTINF:-1 tvg-id="BSTVTokyo.jp" group-title="Japan | BS",BSテレ東
+https://naori-test.netgenx.site/pxx.php?shk_cid=bs05#.m3u8
+
+#EXTINF:-1 tvg-id="BS10スターチャンネル.jp" group-title="Japan | BS",BS10スターチャンネル
+# tvivu: bs10-jp
+https://srv1.pxfy.dev/?u=gy_Q3Y8NNjBmGOOKiptvGa6eHafysmIQJJRcL5U1d20gjvIkcqKAKqR0NBqRJ9iCsNybVQctU0L51QDba-WuScquqJuNHxMrg-YloQGsCQSP5GfHkpg&exp=1791915221&sig=6ca6bb105422743ee5e272839379872128046ee4140f6ccbf89c50ad3c7271b0
+
+#EXTINF:-1 tvg-id="NHKBS.jp" group-title="Japan | BS",NHK BS
+# tvivu: nhk-bs
+https://srv1.pxfy.dev/?u=PxyZlZElFFlQ9GiXtohLKcdkxkHpeY2nDR1R7jw7vwYRkO8ii-o38bTZ987v36MDBlEYgzID61tn0ElLY9bjO4QFg0U-h1UYS3slLARegkOGKiWmCN4&exp=1791915223&sig=9359c4fbc37684c603c36307bd10d6793bd25a370c3db33ecab3d7864ca1adf4
 
 #EXTINF:-1 tvg-id="WOWOWPrime.jp" group-title="Japan | BS",WOWOWプライム
-https://naori-test.netgenx.site/pxx.php?shk_cid=bs12#.m3u8
-
-#EXTINF:-1 group-title="Japan | BS",BS10スターチャンネル
-https://naori-test.netgenx.site/pxx.php?shk_cid=bs07#.m3u8
+# tvivu: wowow-jp
+https://srv1.pxfy.dev/?u=ZBcCj5BAQrAGEtzJb7MqdmlTwfwMNRezcI4C8-UgMWjVk_5TLi2fC5QNBYkXPpSZARZx0fHwkJu9jwW5CH_fBpKn2lSU19DFG0dBThZmHLZ6jZHQCME&exp=1791915225&sig=78a4fd88a51301d376dc2237e4fe281b29f89391667a7ce82283cdd5b4fea95d
 
 #EXTINF:-1 tvg-id="NHKWorldJapan.jp@SD" group-title="Japan | NHK",NHK World-Japan
 https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
