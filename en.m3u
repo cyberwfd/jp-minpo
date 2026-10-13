@@ -1,0 +1,35 @@
+#EXTM3U
+# 美英经典频道 - 用户筛选版 (2026-10-14)
+# 16 个台, 来源: hacks.tools eng.m3u + Free-TV (BBC News)
+#EXTINF:-1 tvg-name="HBO" group-title="美国娱乐",HBO
+http://tvsen7.aynascope.net/hbo/index.m3u8
+#EXTINF:-1 tvg-name="HBO Hits" group-title="美国娱乐",HBO Hits
+http://tvsen7.aynascope.net/hbo2/index.m3u8
+#EXTINF:-1 tvg-name="Cinemax" group-title="美国娱乐",Cinemax
+http://23.237.104.106:8080/USA_CINEMAX_WEST/index.m3u8
+#EXTINF:-1 tvg-name="MoreMax" group-title="美国娱乐",MoreMax
+http://23.237.104.106:8080/USA_MOREMAX/index.m3u8
+#EXTINF:-1 tvg-name="Starz" group-title="美国娱乐",Starz
+http://23.237.104.106:8080/USA_STARZ_WEST/index.m3u8
+#EXTINF:-1 tvg-name="Starz Comedy" group-title="美国娱乐",Starz Comedy
+http://23.237.104.106:8080/USA_STARZ_COMEDY/index.m3u8
+#EXTINF:-1 tvg-name="AMC" group-title="美国娱乐",AMC
+http://23.239.31.26:8989/amc/index.m3u8
+#EXTINF:-1 tvg-name="BBC America" group-title="美国娱乐",BBC America
+http://23.239.31.26:8989/bbcamerica/index.m3u8
+#EXTINF:-1 tvg-name="IFC" group-title="美国娱乐",IFC
+http://23.237.104.106:8080/USA_IFC/index.m3u8
+#EXTINF:-1 tvg-name="CNN" group-title="美国新闻",CNN
+https://tvsen6.aynaott.com/cnn/index.m3u8
+#EXTINF:-1 tvg-name="CNN International" group-title="美国新闻",CNN International
+https://d3bp6dwmpbdajl.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-ury0meh5m4nzm/index.m3u8
+#EXTINF:-1 tvg-name="Fox News" group-title="美国新闻",Fox News
+https://tvsen6.aynaott.com/foxnews/index.m3u8
+#EXTINF:-1 tvg-name="Bloomberg" group-title="美国新闻",Bloomberg
+http://23.237.104.106:8080/USA_BLOOMBERG/index.m3u8
+#EXTINF:-1 tvg-name="HLN" group-title="美国新闻",HLN
+http://23.237.104.106:8080/USA_HLN/index.m3u8
+#EXTINF:-1 tvg-name="Newsmax" group-title="美国新闻",Newsmax
+https://nmx1ota.akamaized.net/hls/live/2107010/Live_1/index.m3u8
+#EXTINF:-1 tvg-name="BBC News" group-title="英国新闻",BBC News
+https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8
