@@ -1,0 +1,24 @@
+name: refresh-cn-en
+on:
+  schedule:
+    - cron: '0 23 * * *'   # 北京时间每天 07:00
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Rebuild cn.m3u and en.m3u
+        run: python scripts/rebuild.py
+      - name: Commit updates
+        run: |
+          git config user.name "tv-bot"
+          git config user.email "tv-bot@users.noreply.github.com"
+          git add cn.m3u en.m3u
+          git diff --cached --quiet || git commit -m "daily refresh cn/en $(date -u +%F)"
+          git push
