@@ -5,7 +5,7 @@
 
 #EXTINF:-1 tvg-id="JOAXDTV.jp" group-title="Japan | Terrestrial",日本テレビ
 # tvivu: jp-2
-https://srv1.pxfy.dev/?u=0KO6lzRt7Hsn3sdkyFlxRm1M6MfixSuSI48zxtfDMpILDseXKVzOZiFzFpNB8JIoaVy3V0ZyA405v6z2dtHHRqO5Uw&exp=1792102629&sig=5ab07e2e756eb9f721a2a697e566ba0ec2638bf88e758b68ba4eb9650cc953a6
+https://srv3.pxfy.dev/?u=7JbgAaTcykuAjqq9cM5Pblf3zAVpCwMh5oTpxJn3y6NU_FVquGgyYWmsXVP-Rkmmd10AtqCOuhgB1VKyJhqOW05rBkfuCARr-8TghI8MghuN4gxly4GFBw&exp=1792188931&sig=62c4e3e1b5f9706f7b8cb8eab9dd54d52f0837d1618cfb80f18b98023d9eb9f6
 
 #EXTINF:-1 tvg-id="JOEXDTV.jp" group-title="Japan | Terrestrial",テレビ朝日
 https://tvasahi.mov3.co/hls/tvasahi.m3u8
@@ -24,11 +24,11 @@ https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01287-rakutentvjapan-tokyomx-cmaf-r
 
 #EXTINF:-1 tvg-id="BSAsahi.jp" group-title="Japan | BS",BS朝日
 # tvivu: bs-jp
-https://srv1.pxfy.dev/?u=eCESrslj_IRziSU9DLIE0Y7glhYof6aly655DWrjA5Cc0rWV_3luWeE9DeIcBNGeP6IZsNrU8BGldBAopjn9n7R2WzVEfHEa9PqJI8m51oH8zRTccJM&exp=1792016053&sig=ce7c1751d9fa357ec157cbe31caccc7e877ebff6cf7b92028eac6b1558db0c78
+https://srv3.pxfy.dev/?u=wy4E1-OMWkSibTi_a1wr5pSHUhRNOjp3-I1bV2N9so9tumV70FNkHA6fix3NajEdAsRIrYxhFNaL4IkkC1o7KWoqyTAoLtjBeH63oQk67IpS20klUjk&exp=1792188927&sig=fb8492b28d052523104a24da15affe82b05f34ce69f162bbac026e1e60d6bd27
 
 #EXTINF:-1 tvg-id="BSTBS.jp" group-title="Japan | BS",BS-TBS
 # tvivu: bs-tbs
-https://srv3.pxfy.dev/?u=3UCaVjyjxqLjpwmI5fInH8dRKDEj9C6KbHNa5XKobcT3Mc_oqpxhv1C7s44udV56x0sCTpBJkU8lUVibQ8k2La47Hu9dkzoAAeuC_zzHdx0DxiIEcfM&exp=1792016055&sig=d521b97d471cfbcfd4959bf0e1b7f9a35d4f641c0ba96d435fcfcea280cdd4d0
+https://srv3.pxfy.dev/?u=3UCaVjyjxqLjpwmI5fInH8dRKDEj9C6KbHNa5XKobcT3Mc_oqpxhv1C7s44udV56x0sCTpBJkU8lUVibQ8k2La47Hu9dkzoAAeuC_zzHdx0DxiIEcfM&exp=1792188929&sig=88d7a4ba6ec95d6ce259a91fbb83c732cca6d6e3d2f54d06a4a0cc737258ea13
 
 #EXTINF:-1 tvg-id="BSFuji.jp" group-title="Japan | BS",BSフジ
 https://naori-test.netgenx.site/pxx.php?shk_cid=bs06#.m3u8
@@ -38,15 +38,15 @@ https://naori-test.netgenx.site/pxx.php?shk_cid=bs05#.m3u8
 
 #EXTINF:-1 tvg-id="BS10スターチャンネル.jp" group-title="Japan | BS",BS10スターチャンネル
 # tvivu: bs10-jp
-https://srv3.pxfy.dev/?u=gy_Q3Y8NNjBmGOOKiptvGa6eHafysmIQJJRcL5U1d20gjvIkcqKAKqR0NBqRJ9iCsNybVQctU0L51QDba-WuScquqJuNHxMrg-YloQGsCQSP5GfHkpg&exp=1792016057&sig=61f5b4e4d8c3081391f1e504ed4187d380e8600328246cd11a64f3ca59c5ca31
+https://srv3.pxfy.dev/?u=gy_Q3Y8NNjBmGOOKiptvGa6eHafysmIQJJRcL5U1d20gjvIkcqKAKqR0NBqRJ9iCsNybVQctU0L51QDba-WuScquqJuNHxMrg-YloQGsCQSP5GfHkpg&exp=1792188930&sig=09feef9c33d4f12f2c94c453af77650d7c1fc11d6ff75da8c4ad2f5fe0471507
 
 #EXTINF:-1 tvg-id="NHKBS.jp" group-title="Japan | BS",NHK BS
 # tvivu: nhk-bs
-https://srv3.pxfy.dev/?u=PxyZlZElFFlQ9GiXtohLKcdkxkHpeY2nDR1R7jw7vwYRkO8ii-o38bTZ987v36MDBlEYgzID61tn0ElLY9bjO4QFg0U-h1UYS3slLARegkOGKiWmCN4&exp=1792016059&sig=bb7f3922072e75f36e83ac49ae3e6787490b506e2643825ab0047468de5912b8
+https://srv3.pxfy.dev/?u=PxyZlZElFFlQ9GiXtohLKcdkxkHpeY2nDR1R7jw7vwYRkO8ii-o38bTZ987v36MDBlEYgzID61tn0ElLY9bjO4QFg0U-h1UYS3slLARegkOGKiWmCN4&exp=1792188933&sig=496fe5e75c1bf9e2609704e36d91c0ec8a871b5eb5ef021fb603abbcf2c8cb64
 
 #EXTINF:-1 tvg-id="WOWOWPrime.jp" group-title="Japan | BS",WOWOWプライム
 # tvivu: wowow-jp
-https://srv3.pxfy.dev/?u=ZBcCj5BAQrAGEtzJb7MqdmlTwfwMNRezcI4C8-UgMWjVk_5TLi2fC5QNBYkXPpSZARZx0fHwkJu9jwW5CH_fBpKn2lSU19DFG0dBThZmHLZ6jZHQCME&exp=1792016060&sig=def2a71e71d15712a77a4d961aba0456696d8d3b47c02843806a3be522a871c1
+https://srv3.pxfy.dev/?u=KkuielG1smYg0TEpEB2I106DcbpU5aMtVt3RBDi3NFCwVwSEYNwyxX2Rd27yb9hhR6IhWu7Jfc3whv9tJ2OplBVo9fKhaFgKCyh3Nvd5WWpx_mKFxqI&exp=1792188934&sig=4ef310a89e04d321fd758dce9e74bc3953a7cd1ef29809b2f35012d17ad6e8c2
 
 #EXTINF:-1 tvg-id="NHKWorldJapan.jp@SD" group-title="Japan | NHK",NHK World-Japan
 https://masterpl.hls.nhkworld.jp/hls/w/live/smarttv.m3u8
